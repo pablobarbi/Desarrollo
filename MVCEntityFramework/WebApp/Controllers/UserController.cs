@@ -11,7 +11,7 @@ namespace WebApp.Controllers
 
         static readonly IRepository<Usuario> repository = new UserRepository();
 
-        // GET: User
+       
         public ActionResult Index()
         {
             return View();
@@ -31,7 +31,7 @@ namespace WebApp.Controllers
        
         public JsonResult Edit(Usuario item)
         {
-            //user.Id = user.Id;
+           
             if (repository.Update(item))
             {
                 return Json(repository.GetAll(), JsonRequestBehavior.AllowGet);

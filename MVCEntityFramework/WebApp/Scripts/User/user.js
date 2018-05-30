@@ -104,7 +104,7 @@
                 data: ko.toJSON(User),
             success: function (data) {
                 self.Users.removeAll();
-                self.Users(data); //Put the response in ObservableArray
+                self.Users(data);
                 self.User(null);
                 alert("Se actualizo correctamente");
             }
@@ -139,10 +139,10 @@
 
 
 
-    //bind filter to filter text
+    
     self.filter = ko.observable();
 
-    //Use filteredList in html binding instead of controlFields
+    
     self.filteredUsers = ko.computed(function () {
         var filter = self.filter(),
             arr = [];
